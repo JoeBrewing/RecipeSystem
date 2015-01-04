@@ -7,14 +7,17 @@
       );
     });
     return (
-      <table className="hopList">
-	    <tr>
-	      <th>Variety</th>
-	      <th>Amount</th>
-	       </tr>
-	    {hopNodes}
-	  </table>
-      
+      <div className="container">
+	    <div className="row">
+	      <table className="hopList table">
+	        <tr>
+	          <th>Variety</th>
+	          <th>Amount</th>
+	        </tr>
+	        {hopNodes}
+	      </table>
+        </div>
+	  </div>
     );
   }
 });
@@ -35,9 +38,17 @@ var HopForm = React.createClass({
   render: function() {
     return (
       <form className="hopForm" onSubmit={this.handleSubmit}>
-		<input type="text" placeholder="Variety" ref="type" />
-		<input type="text" placeholder="Amount" ref="amount" />
-        <input type="submit" value="Add" />
+	    <div className="container">
+		  <div className="row">
+		    <div className="col-xs-4">
+		      <input type="text" className="form-control" placeholder="Variety" ref="type" />
+			</div>
+			<div className="col-xs-2">
+		      <input type="text" className="form-control" placeholder="Amount" ref="amount" />
+			</div>
+            <input type="submit" className="btn btn-default" value="Add" />
+		  </div>
+		</div>
       </form>
     );
   }
