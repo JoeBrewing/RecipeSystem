@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="well">
+                <h3>Hops</h3>
+                <span class="help-block">Enter the hop type, amount, and time of addition then click submit.</span>
+                <div class="form-group">
+                    <div id="hop_area"></div>
+                </div>
+                <script src="@Url.Content("~/Scripts/HopsScript.jsx")"></script>
+                <script src="@Url.Content("~/Scripts/showdown.min.js")"></script>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="well">
+                <h3>Grain Bill</h3>
+                <span class="help-block">Enter the grain type, and amount then click submit.</span>
+                
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="well">
+                <h3>Yeast</h3>
+                <span class="help-block">Enter the yeast type, and amount then click submit.</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
