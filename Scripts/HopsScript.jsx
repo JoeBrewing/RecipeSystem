@@ -2,15 +2,19 @@
   render: function() {
     var hopNodes = this.props.data.map(function (hop) {
       return (
-        <Hop type={hop.Type}>
-          {hop.Amount}
+        <Hop type={hop.Type} amount={hop.Amount}>
         </Hop>
       );
     });
     return (
-      <div className="hopList">
-        {hopNodes}
-      </div>
+      <table className="hopList">
+	    <tr>
+	      <th>Variety</th>
+	      <th>Amount</th>
+	       </tr>
+	    {hopNodes}
+	  </table>
+      
     );
   }
 });
@@ -43,11 +47,10 @@ var Hop = React.createClass({
   render: function() {
 	
     return (
-      <div className="hop">
-        {this.props.type}
-        
-        {this.props.children}
-      </div>
+	  <tr className="hop">
+        <td>{this.props.type}</td>
+        <td>{this.props.amount}</td>
+	  </tr>
     );
   }
 });
