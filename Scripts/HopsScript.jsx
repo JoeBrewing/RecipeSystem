@@ -2,7 +2,7 @@
   render: function() {
     var hopNodes = this.props.data.map(function (hop) {
       return (
-        <Hop type={hop.Type} amount={hop.Amount} dimension={hop.Dimension}>
+        <Hop type={hop.Type} amount={hop.Amount} dimension={hop.Dimension} timeofaddition={hop.TimeOfAddition}>
         </Hop>
       );
     });
@@ -14,6 +14,7 @@
 	          <th>Variety</th>
 	          <th>Amount</th>
 			  <th>Measurement</th>
+			  <th>Time of Addition</th>
 	        </tr>
 	        {hopNodes}
 	      </table>
@@ -29,13 +30,15 @@ var HopForm = React.createClass({
     var type = this.refs.type.getDOMNode().value.trim();
     var amount = this.refs.amount.getDOMNode().value.trim();
 	var dimension = this.refs.dimension.getDOMNode().value.trim();
-    if (!dimension || !amount || !type) {
+	var timeofaddition = this.refs.timeofaddition.getDOMNode().value.trim();
+    if (!timeofaddition || !dimension || !amount || !type) {
       return;
     }
-    this.props.onHopSubmit({type: type, amount: amount, dimension: dimension});
+    this.props.onHopSubmit({type: type, amount: amount, dimension: dimension, timeofaddition: timeofaddition});
     this.refs.type.getDOMNode().value = '';
     this.refs.amount.getDOMNode().value = '';
 	this.refs.dimension.getDOMNode().value = '';
+	this.refs.timeofaddition.getDOMNode().value = '';
     return;
   },
   render: function() {
@@ -51,6 +54,9 @@ var HopForm = React.createClass({
 			</div>
 			<div className="col-xs-2">
 			  <select className="form-control" ref="dimension"><option>Ounces</option><option>Pounds</option></select>
+			</div>
+			<div className="col-xs-2">
+			  <input type="text" className="form-control" placeholder="Time of Addition" ref="timeofaddition" />
 			</div>
             <input type="submit" className="btn btn-default" value="Add" />
 		  </div>
@@ -68,6 +74,7 @@ var Hop = React.createClass({
         <td>{this.props.type}</td>
         <td>{this.props.amount}</td>
 		<td>{this.props.dimension}</td>
+		<td>{this.props.timeofaddition}</td>
 	  </tr>
     );
   }
@@ -88,6 +95,7 @@ var HopBox = React.createClass({
     data.append('Type', hop.type);
     data.append('Amount', hop.amount);
 	data.append('Dimension', hop.dimension);
+	data.append('TimeOfAddition', hop.timeofaddition);
 
     var xhr = new XMLHttpRequest();
     xhr.open('post', this.props.submitUrl, true);

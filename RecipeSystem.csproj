@@ -144,8 +144,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\IngredientModel.cs" />
     <Compile Include="Models\HopModel.cs" />
+    <Compile Include="Models\IngredientModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
