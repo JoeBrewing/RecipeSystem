@@ -26,6 +26,12 @@ namespace RecipeSystem
             );
 
             routes.MapRoute(
+                name: "ClearHops",
+                url: "hops/clearhops",
+                defaults: new { controller = "Home", action = "ClearHops" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

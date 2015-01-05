@@ -44,6 +44,12 @@
             return Content("Success :)");
         }
 
+        public ActionResult ClearHops()
+        {
+            _hops.Clear();
+            return Content("Success :)");
+        }
+
         [HttpPost]
         public ActionResult AddGrain(IngredientModel grain)
         {

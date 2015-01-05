@@ -2,7 +2,7 @@
   render: function() {
     var hopNodes = this.props.data.map(function (hop) {
       return (
-        <Hop type={hop.Type} amount={hop.Amount}>
+        <Hop type={hop.Type} amount={hop.Amount} dimension={hop.Dimension}>
         </Hop>
       );
     });
@@ -13,6 +13,7 @@
 	        <tr>
 	          <th>Variety</th>
 	          <th>Amount</th>
+			  <th>Measurement</th>
 	        </tr>
 	        {hopNodes}
 	      </table>
@@ -22,17 +23,38 @@
   }
 });
 
+var ClearForm = React.createClass({
+  handleSubmit: function(e) {
+    e.preventDefault();
+    
+    return;
+  },
+  render: function() {
+    return (
+      <form className="clearForm" onSubmit={this.handleSubmit}>
+	    <div className="container">
+		  <div className="row">
+            <input type="submit" className="btn btn-default" value="Clear the Hops List" />
+		  </div>
+		</div>
+      </form>
+    );
+  }
+});
+
 var HopForm = React.createClass({
   handleSubmit: function(e) {
     e.preventDefault();
     var type = this.refs.type.getDOMNode().value.trim();
     var amount = this.refs.amount.getDOMNode().value.trim();
-    if (!amount || !type) {
+	var dimension = this.refs.dimension.getDOMNode().value.trim();
+    if (!dimension || !amount || !type) {
       return;
     }
-    this.props.onHopSubmit({type: type, amount: amount});
+    this.props.onHopSubmit({type: type, amount: amount, dimension: dimension});
     this.refs.type.getDOMNode().value = '';
     this.refs.amount.getDOMNode().value = '';
+	this.refs.dimension.getDOMNode().value = '';
     return;
   },
   render: function() {
@@ -45,6 +67,9 @@ var HopForm = React.createClass({
 			</div>
 			<div className="col-xs-2">
 		      <input type="text" className="form-control" placeholder="Amount" ref="amount" />
+			</div>
+			<div className="col-xs-2">
+			  <select className="form-control" ref="dimension"><option>Ounces</option><option>Pounds</option></select>
 			</div>
             <input type="submit" className="btn btn-default" value="Add" />
 		  </div>
@@ -61,7 +86,24 @@ var Hop = React.createClass({
 	  <tr className="hop">
         <td>{this.props.type}</td>
         <td>{this.props.amount}</td>
+		<td>{this.props.dimension}</td>
 	  </tr>
+    );
+  }
+});
+
+var ClearBox = React.createClass({
+  handleClearSubmit: function() {
+	var xhr = new XMLHttpRequest();
+    xhr.open('post', this.props.submitUrl, true);
+    
+    xhr.send();
+  },
+  render: function() {
+    return (
+      <div className="clearBox">
+        <ClearForm onHopSubmit={this.handleClearSubmit} />
+      </div>
     );
   }
 });
@@ -80,6 +122,7 @@ var HopBox = React.createClass({
     var data = new FormData();
     data.append('Type', hop.type);
     data.append('Amount', hop.amount);
+	data.append('Dimension', hop.dimension);
 
     var xhr = new XMLHttpRequest();
     xhr.open('post', this.props.submitUrl, true);
@@ -106,6 +149,7 @@ var HopBox = React.createClass({
 });
 
 React.render(
+  <ClearBox url="/hops" submitUrl="/hops/clearhops" pollInterval={2000} />,
   <HopBox url="/hops" submitUrl="/hops/new" pollInterval={2000} />,
   document.getElementById('hop_area')
 );
