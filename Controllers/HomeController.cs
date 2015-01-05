@@ -60,7 +60,7 @@
         [HttpPost]
         public ActionResult AddYeast(IngredientModel yeast)
         {
-            _grains.Add(yeast);
+            _yeasts.Add(yeast);
             return Content("Success :)");
         }
 

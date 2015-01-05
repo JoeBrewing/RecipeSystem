@@ -26,6 +26,12 @@ namespace RecipeSystem
             );
 
             routes.MapRoute(
+                name: "Yeast",
+                url: "yeasts",
+                defaults: new { controller = "Home", action = "yeasts" }
+            );
+
+            routes.MapRoute(
                 name: "NewHop",
                 url: "hops/new",
                 defaults: new { controller = "Home", action = "AddHop" }
@@ -35,6 +41,12 @@ namespace RecipeSystem
                 name: "NewGrain",
                 url: "grains/new",
                 defaults: new { controller = "Home", action = "AddGrain" }
+            );
+
+            routes.MapRoute(
+                name: "NewYeast",
+                url: "yeasts/new",
+                defaults: new { controller = "Home", action = "AddYeast" }
             );
 
             routes.MapRoute(
