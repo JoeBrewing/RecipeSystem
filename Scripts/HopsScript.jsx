@@ -23,25 +23,6 @@
   }
 });
 
-var ClearForm = React.createClass({
-  handleSubmit: function(e) {
-    e.preventDefault();
-    
-    return;
-  },
-  render: function() {
-    return (
-      <form className="clearForm" onSubmit={this.handleSubmit}>
-	    <div className="container">
-		  <div className="row">
-            <input type="submit" className="btn btn-default" value="Clear the Hops List" />
-		  </div>
-		</div>
-      </form>
-    );
-  }
-});
-
 var HopForm = React.createClass({
   handleSubmit: function(e) {
     e.preventDefault();
@@ -92,22 +73,6 @@ var Hop = React.createClass({
   }
 });
 
-var ClearBox = React.createClass({
-  handleClearSubmit: function() {
-	var xhr = new XMLHttpRequest();
-    xhr.open('post', this.props.submitUrl, true);
-    
-    xhr.send();
-  },
-  render: function() {
-    return (
-      <div className="clearBox">
-        <ClearForm onHopSubmit={this.handleClearSubmit} />
-      </div>
-    );
-  }
-});
-
 var HopBox = React.createClass({
   loadHopsFromServer: function() {
     var xhr = new XMLHttpRequest();
@@ -149,7 +114,6 @@ var HopBox = React.createClass({
 });
 
 React.render(
-  <ClearBox url="/hops" submitUrl="/hops/clearhops" pollInterval={2000} />,
   <HopBox url="/hops" submitUrl="/hops/new" pollInterval={2000} />,
   document.getElementById('hop_area')
 );

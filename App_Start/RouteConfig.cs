@@ -20,9 +20,21 @@ namespace RecipeSystem
             );
 
             routes.MapRoute(
+                name: "Grain",
+                url: "grains",
+                defaults: new { controller = "Home", action = "grains" }
+            );
+
+            routes.MapRoute(
                 name: "NewHop",
                 url: "hops/new",
                 defaults: new { controller = "Home", action = "AddHop" }
+            );
+
+            routes.MapRoute(
+                name: "NewGrain",
+                url: "grains/new",
+                defaults: new { controller = "Home", action = "AddGrain" }
             );
 
             routes.MapRoute(
