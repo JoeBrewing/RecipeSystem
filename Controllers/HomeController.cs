@@ -22,6 +22,11 @@
             _yeasts = new List<IngredientModel>();
         }
 
+        public ActionResult SaveRecipe(List<HopModel> hops, List<IngredientModel> grains, List<IngredientModel> yeasts)
+        {
+            return View("Home");
+        }
+
         public ActionResult Hops()
         {
             return Json(_hops, JsonRequestBehavior.AllowGet);
@@ -47,7 +52,7 @@
         public ActionResult ClearHops()
         {
             _hops.Clear();
-            return Content("Success :)");
+            return View();
         }
 
         [HttpPost]

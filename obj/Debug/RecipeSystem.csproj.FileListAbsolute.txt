@@ -41,3 +41,4 @@ C:\Test Projects\RecipeSystem\bin\ru-ru\JavaScriptEngineSwitcher.Core.resources.
 C:\Test Projects\RecipeSystem\bin\ru-ru\MsieJavaScriptEngine.resources.dll
 C:\Test Projects\RecipeSystem\obj\Debug\RecipeSystem.dll
 C:\Test Projects\RecipeSystem\obj\Debug\RecipeSystem.pdb
+C:\Test Projects\RecipeSystem\obj\Debug\RecipeSystem.csprojResolveAssemblyReference.cache

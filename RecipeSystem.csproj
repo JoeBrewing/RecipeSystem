@@ -181,13 +181,13 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\HopsScript.jsx" />
+    <Content Include="Scripts\Hops.jsx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\GrainsScript.jsx" />
+    <Content Include="Scripts\Grains.jsx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\YeastsScript.jsx" />
+    <Content Include="Scripts\Yeasts.jsx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
