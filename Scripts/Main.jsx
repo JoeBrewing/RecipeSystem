@@ -1,4 +1,4 @@
-﻿var Hops = require('~/Hops.jsx')
+﻿var Hops = require('~/Scripts/Hops.jsx')
 
 var MainBox = React.createClass({
   render: function() {
