@@ -11,7 +11,7 @@ var MainBox = React.createClass({
                       <h3>Hops</h3>
                       <span className="help-block">Enter the hop type, amount, and time of addition then click submit.</span>
                       <div className="form-group">
-                          <Hops />
+                          <Hops url="/hops" submitUrl="/hops/new" pollInterval={2000} />
                       </div>
                   </div>
               </div>
