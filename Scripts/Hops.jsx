@@ -121,6 +121,6 @@ var HopBox = React.createClass({
   }
 });
 
-module.exports = HopBox;
+module.exports = <HopBox url="/hops" submitUrl="/hops/new" pollInterval={2000} />;
 
 
