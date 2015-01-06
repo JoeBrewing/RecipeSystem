@@ -113,7 +113,4 @@ var GrainBox = React.createClass({
   }
 });
 
-React.render(
-  <GrainBox url="/grains" submitUrl="/grains/new" pollInterval={2000} />,
-  document.getElementById('grain_area')
-);
+

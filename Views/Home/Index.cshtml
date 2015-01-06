@@ -3,43 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-11">
-            <div class="well">
-                <h3>Hops</h3>
-                <span class="help-block">Enter the hop type, amount, and time of addition then click submit.</span>
-                <div class="form-group">
-                    <div id="hop_area"></div>
-                </div>
-                <script src="@Url.Content("~/Scripts/Hops.jsx")"></script>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-11">
-            <div class="well">
-                <h3>Grain Bill</h3>
-                <span class="help-block">Enter the grain type, and amount then click submit.</span>
-                <div class="form-group">
-                    <div id="grain_area"></div>
-                </div>
-                <script src="@Url.Content("~/Scripts/Grains.jsx")"></script>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-11">
-            <div class="well">
-                <h3>Yeast</h3>
-                <span class="help-block">Enter the yeast type, and amount then click submit.</span>
-                <div class="form-group">
-                    <div id="yeast_area"></div>
-                </div>
-                <script src="@Url.Content("~/Scripts/Yeasts.jsx")"></script>
-            </div>
-        </div>
-    </div>
-</div>
+<script src="@Url.Content("~/Scripts/Yeasts.jsx")"></script>
+<div id="main_area"></div>
 
 

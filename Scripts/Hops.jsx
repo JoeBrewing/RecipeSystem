@@ -121,7 +121,4 @@ var HopBox = React.createClass({
   }
 });
 
-React.render(
-  <HopBox url="/hops" submitUrl="/hops/new" pollInterval={2000} />,
-  document.getElementById('hop_area')
-);
+

@@ -113,7 +113,4 @@ var YeastBox = React.createClass({
   }
 });
 
-React.render(
-  <YeastBox url="/yeasts" submitUrl="/yeasts/new" pollInterval={2000} />,
-  document.getElementById('yeast_area')
-);
+
