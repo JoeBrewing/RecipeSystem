@@ -5201,9 +5201,6 @@
     <Content Include="Scripts\Grains.jsx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\Yeasts.jsx" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="react_components\Main.jsx" />
   </ItemGroup>
   <ItemGroup>
@@ -7699,6 +7696,18 @@
     <Content Include="node_modules\react\node_modules\envify\README.md" />
     <Content Include="node_modules\react\package.json" />
     <Content Include="node_modules\react\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="react_components\Yeast.jsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="react_components\YeastList.jsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="react_components\YeastForm.jsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="react_components\YeastBox.jsx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
