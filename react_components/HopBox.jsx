@@ -1,6 +1,6 @@
 ﻿var React = require('react');
-var HopList = require('~/react_components/Hops/HopList.jsx')
-var HopForm = require('~/react_components/Hops/HopForm.jsx')
+var HopList = require('./HopList.jsx')
+var HopForm = require('./HopForm.jsx')
 
 module.exports = React.createClass({
   loadHopsFromServer: function() {

@@ -1,5 +1,5 @@
 ﻿var React = require('react');
-var HopBox = require('~/react_components/Hops/HopBox.jsx')
+var HopBox = require('./HopBox.jsx')
 
 var MainBox = React.createClass({
   render: function() {

@@ -1,5 +1,5 @@
 ﻿var React = require('react');
-var Hop = require('~/Scripts/Hops/Hop.jsx')
+var Hop = require('./Hop.jsx')
 
 module.exports = React.createClass({
   render: function() {
