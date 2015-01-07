@@ -5198,9 +5198,6 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\Grains.jsx" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="react_components\Main.jsx" />
   </ItemGroup>
   <ItemGroup>
@@ -7708,6 +7705,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="react_components\YeastBox.jsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="react_components\Grain.jsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="react_components\GrainList.jsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="react_components\GrainForm.jsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="react_components\GrainBox.jsx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
