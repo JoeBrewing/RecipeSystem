@@ -1,4 +1,5 @@
-﻿var Hops = require(['~/Scripts/Hops.jsx'])
+﻿var React = require('react');
+var HopBox = require('~/react_components/Hops/HopBox.jsx')
 
 var MainBox = React.createClass({
   render: function() {
@@ -11,7 +12,7 @@ var MainBox = React.createClass({
                       <h3>Hops</h3>
                       <span className="help-block">Enter the hop type, amount, and time of addition then click submit.</span>
                       <div className="form-group">
-						<Hops />
+						<HopBox url="/hops" submitUrl="/hops/new" pollInterval={2000} />;
                       </div>
                   </div>
               </div>
