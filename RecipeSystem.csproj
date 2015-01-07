@@ -5175,6 +5175,7 @@
     <Content Include="Scripts\require.js" />
     <Content Include="Scripts\showdown.js" />
     <Content Include="Scripts\showdown.min.js" />
+    <Content Include="react_components\webpack.config.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -5203,7 +5204,7 @@
     <Content Include="Scripts\Yeasts.jsx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\Main.jsx" />
+    <Content Include="react_components\Main.jsx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".bin\node.cmd" />
